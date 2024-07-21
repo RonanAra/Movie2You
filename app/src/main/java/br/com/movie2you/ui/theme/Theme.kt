@@ -11,11 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = SteelGray
+    primary = Onyx
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = SteelGray
+    primary = Onyx
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
     surface = Color(0xFFFFFBFE),
