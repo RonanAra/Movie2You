@@ -9,6 +9,13 @@ lifecycleRuntimeKtx = "2.8.3"
 activityCompose = "1.9.0"
 composeBom = "2024.06.00"
 lottie = "6.4.1"
+navigation = "2.8.0-beta05"
+coilCompose = "2.5.0"
+hiltAndroid = "2.50"
+hiltNavigationCompose = "1.2.0"
+ksp = "2.0.0-1.0.21"
+kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxSerializationJson = "1.6.0"
 
 [libraries]
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
@@ -22,16 +29,24 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 lottie = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie" }
+compose-navigation = { group = "androidx.navigation" , name = "navigation-compose", version.ref = "navigation" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 [bundles]
 common-libs = [
     "androidx-core-ktx", "androidx-lifecycle-runtime-ktx", "androidx-activity-compose",
     "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling", "androidx-ui-tooling-preview", "androidx-ui-test-manifest",
-    "androidx-material3", "lottie", "androidx-compose-bom"
+    "androidx-material3", "lottie", "androidx-compose-bom", "compose-navigation", "coil-compose", "hilt-android", "hilt-compiler",
+    "androidx-hilt-navigation-compose", "kotlinx-coroutines-android", "kotlinx-serialization-json"
 ]
 
 test-libs = ["junit", "androidx-junit", "androidx-espresso-core", "androidx-ui-test-junit4"]
@@ -40,3 +55,4 @@ test-libs = ["junit", "androidx-junit", "androidx-espresso-core", "androidx-ui-t
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
