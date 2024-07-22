@@ -1,4 +1,4 @@
-package br.com.movie2you.presentation.splash
+package br.com.movie2you.presentation.features.splash
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
