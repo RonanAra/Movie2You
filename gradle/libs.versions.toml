@@ -45,7 +45,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 common-libs = [
     "androidx-core-ktx", "androidx-lifecycle-runtime-ktx", "androidx-activity-compose",
     "androidx-ui", "androidx-ui-graphics", "androidx-ui-tooling", "androidx-ui-tooling-preview", "androidx-ui-test-manifest",
-    "androidx-material3", "lottie", "androidx-compose-bom", "compose-navigation", "coil-compose", "hilt-android", "hilt-compiler",
+    "androidx-material3", "lottie", "compose-navigation", "coil-compose", "hilt-android",
     "androidx-hilt-navigation-compose", "kotlinx-coroutines-android", "kotlinx-serialization-json"
 ]
 
@@ -56,3 +56,4 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinKsp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinKsp)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 android {
@@ -50,6 +51,9 @@ android {
 
 dependencies {
 
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.common.libs)
-    testImplementation(libs.bundles.test.libs)
+    ksp(libs.hilt.compiler)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.bundles.test.libs)
 }
