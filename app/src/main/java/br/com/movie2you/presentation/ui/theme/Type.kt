@@ -1,4 +1,4 @@
-package br.com.movie2you.ui.theme
+package br.com.movie2you.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
