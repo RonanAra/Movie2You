@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinKsp)
     alias(libs.plugins.kotlinSerialization)
+    alias(libs.plugins.hilt)
 }
 
 val apikeyPropertiesFile = rootProject.file("apikey.properties")
