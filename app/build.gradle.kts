@@ -1,9 +1,18 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlinKsp)
     alias(libs.plugins.kotlinSerialization)
+}
+
+val apikeyPropertiesFile = rootProject.file("apikey.properties")
+val apikeyProperties = Properties()
+FileInputStream(apikeyPropertiesFile).use {
+    apikeyProperties.load(it)
 }
 
 android {
@@ -21,6 +30,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField("String", "API_KEY", apikeyProperties["API_KEY"].toString())
     }
 
     buildTypes {
@@ -41,6 +52,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     packaging {
         resources {
@@ -55,5 +67,5 @@ dependencies {
     implementation(libs.bundles.common.libs)
     ksp(libs.hilt.compiler)
     androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.bundles.test.libs)
+    testImplementation(libs.bundles.test.libs)
 }
